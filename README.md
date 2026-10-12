@@ -1,7 +1,7 @@
 # Landing page — ONG SJPA
 
 Landing page da **Sociedade Juizforana de Proteção aos Animais (SJPA)**, de Juiz de Fora/MG.
-Protótipo acadêmico do **Grupo 2**.
+
 
 ## Como abrir
 
