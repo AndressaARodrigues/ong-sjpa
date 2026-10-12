@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SJPA — Sociedade Juizforana de Proteção aos Animais</title>
+  <meta name="description" content="Há quase 40 anos cuidando de animais abandonados em Juiz de Fora/MG. Adote, doe, apadrinhe ou seja voluntário da SJPA.">
+  <meta name="theme-color" content="#3F9A42">
+
+  <!-- Open Graph (compartilhamento em redes sociais) -->
+  <meta property="og:title" content="SJPA — Proteção aos Animais em Juiz de Fora">
+  <meta property="og:description" content="Adote, doe ou seja voluntário. Mais de 600 animais esperam por você.">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="pt_BR">
+
+  <link rel="icon" type="image/png" href="assets/img/favicon.png">
+
+  <!-- Fontes: Poppins (títulos) + Nunito Sans (texto) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800&family=Nunito+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="assets/css/style.css">
+
+  <!-- Marca que o JS está ativo (as animações de scroll só escondem conteúdo quando o JS funciona) -->
+  <script>document.documentElement.classList.add('js');</script>
+</head>
+<body>
+
+  <!-- ===================== ÍCONES (SVG sprite) ===================== -->
+  <svg xmlns="http://www.w3.org/2000/svg" style="display:none" aria-hidden="true">
+    <symbol id="i-paw" viewBox="0 0 24 24"><ellipse cx="6" cy="10" rx="2.2" ry="2.8"/><ellipse cx="10" cy="6" rx="2.2" ry="2.9"/><ellipse cx="14.5" cy="6" rx="2.2" ry="2.9"/><ellipse cx="18.5" cy="10" rx="2.2" ry="2.8"/><path d="M12.2 11.5c-2.6 0-6.2 3.9-6.2 6.6 0 1.9 1.5 2.6 3 2.6 1.3 0 2.1-.7 3.2-.7s1.9.7 3.2.7c1.5 0 3-.7 3-2.6 0-2.7-3.6-6.6-6.2-6.6z"/></symbol>
+    <symbol id="i-heart" viewBox="0 0 24 24"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 0 0-7.8 7.8l1 1.1L12 21.2l7.8-7.7 1-1.1a5.5 5.5 0 0 0 0-7.8z" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-home" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l9-7 9 7"/><path d="M5 10v10h14V10"/><path d="M10 20v-6h4v6"/></g></symbol>
+    <symbol id="i-users" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.9"/><path d="M16 3.1a4 4 0 0 1 0 7.8"/></g></symbol>
+    <symbol id="i-gift" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="8" width="18" height="4" rx="1"/><path d="M12 8v13"/><path d="M19 12v7a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-7"/><path d="M7.5 8a2.5 2.5 0 0 1 0-5C10 3 12 8 12 8s2-5 4.5-5a2.5 2.5 0 0 1 0 5"/></g></symbol>
+    <symbol id="i-broom" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 3l-7.5 7.5"/><path d="M10 9l5 5"/><path d="M10 9c-2.5 0-4.5 1.5-5.5 4L3 21l8-1.5c2.5-1 4-3 4-5.5"/><path d="M7 17.5l2.5-2.5"/></g></symbol>
+    <symbol id="i-kit" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M9 7V5a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v2"/><path d="M12 10.5v6"/><path d="M9 13.5h6"/></g></symbol>
+    <symbol id="i-syringe" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2l4 4"/><path d="M17 7l3-3"/><path d="M19 9l-9.5 9.5a2.1 2.1 0 0 1-3 0l-1-1a2.1 2.1 0 0 1 0-3L15 5"/><path d="M9 11l4 4"/><path d="M5 19l-3 3"/><path d="M14 4l6 6"/></g></symbol>
+    <symbol id="i-phone" viewBox="0 0 24 24"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-pin" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></g></symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 6l-10 7L2 6"/></g></symbol>
+    <symbol id="i-instagram" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.4A4 4 0 1 1 12.6 8 4 4 0 0 1 16 11.4z"/><path d="M17.5 6.5h0"/></g></symbol>
+    <symbol id="i-clock" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></g></symbol>
+    <symbol id="i-left" viewBox="0 0 24 24"><path d="M15 18l-6-6 6-6" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-right" viewBox="0 0 24 24"><path d="M9 18l6-6-6-6" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-up" viewBox="0 0 24 24"><path d="M18 15l-6-6-6 6" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></symbol>
+    <symbol id="i-close" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-copy" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></g></symbol>
+    <symbol id="i-bone" viewBox="0 0 120 50"><circle cx="14" cy="14" r="12"/><circle cx="14" cy="36" r="12"/><circle cx="106" cy="14" r="12"/><circle cx="106" cy="36" r="12"/><rect x="14" y="13" width="92" height="24" rx="6"/></symbol>
+  </svg>
+
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+
+  <!-- ===================== CABEÇALHO ===================== -->
+  <header class="header" id="header">
+    <div class="container header__inner">
+      <a href="#inicio" class="brand" aria-label="SJPA — página inicial">
+        <img src="assets/img/logo-sjpa.png" alt="" class="brand__logo" width="58" height="58">
+        <span class="brand__name">SJPA</span>
+      </a>
+
+      <nav class="nav" id="nav" aria-label="Menu principal">
+        <ul class="nav__list">
+          <li><a class="nav__link" href="#sobre">Quem somos</a></li>
+          <li><a class="nav__link" href="#adote">Adote</a></li>
+          <li><a class="nav__link" href="#ajudar">Como ajudar</a></li>
+          <li><a class="nav__link" href="#doacao">Doações</a></li>
+          <li><a class="nav__link" href="#duvidas">Dúvidas</a></li>
+          <li><a class="nav__link" href="#contato">Contato</a></li>
+        </ul>
+      </nav>
+
+      <div class="header__actions">
+        <a href="#doacao" class="btn btn--teal btn--sm btn--shine">Doe agora</a>
+        <button class="menu-toggle" id="menu-toggle" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="nav">
+          <svg class="icon icon--menu"><use href="#i-menu"/></svg>
+          <svg class="icon icon--close"><use href="#i-close"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="conteudo">
+
+    <!-- ===================== HERO ===================== -->
+    <section class="hero" id="inicio">
+      <!-- Patinhas flutuantes decorativas -->
+      <svg class="hero__paw hero__paw--1" aria-hidden="true"><use href="#i-paw"/></svg>
+      <svg class="hero__paw hero__paw--2" aria-hidden="true"><use href="#i-paw"/></svg>
+      <svg class="hero__paw hero__paw--3" aria-hidden="true"><use href="#i-paw"/></svg>
+
+      <div class="container hero__grid">
+        <div class="hero__text">
+          <p class="hero__eyebrow anim-up" style="--d: .05s">Juiz de Fora · MG</p>
+          <h1 class="hero__title anim-up" style="--d: .15s">Há quase 40 anos cuidando de animais abandonados em Juiz de Fora/MG.</h1>
+          <p class="hero__subtitle anim-up" style="--d: .3s">Junte-se a nós nessa missão de amor e esperança!</p>
+          <div class="hero__ctas anim-up" style="--d: .45s">
+            <a href="#doacao" class="btn btn--teal btn--lg btn--shine">Doe agora</a>
+            <a href="#adote" class="btn btn--ghost btn--lg">Quero adotar</a>
+          </div>
+        </div>
+
+        <div class="hero__media anim-zoom" style="--d: .25s">
+          <div class="hero__blob-bg" aria-hidden="true"></div>
+          <div class="hero__blob">
+            <!-- Fotos: Unsplash (licença livre), salvas em assets/img — créditos no README -->
+            <img src="assets/img/hero-cachorro.jpg"
+                 alt="Cachorro sentado acenando com a pata" class="hero__img" width="900" height="900" fetchpriority="high">
+          </div>
+          <div class="hero__badge hero__badge--animals">
+            <svg class="icon"><use href="#i-paw"/></svg>
+            <span><strong>+600 animais</strong> sob nossos cuidados</span>
+          </div>
+          <div class="hero__badge hero__badge--love">
+            <svg class="icon"><use href="#i-heart"/></svg>
+            <span>Adote com amor</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Ondas animadas na transição para a próxima seção -->
+      <div class="hero__waves" aria-hidden="true">
+        <svg class="wave wave--back" viewBox="0 0 2880 120" preserveAspectRatio="none"><path d="M0 60 C240 110 480 110 720 60 C960 10 1200 10 1440 60 C1680 110 1920 110 2160 60 C2400 10 2640 10 2880 60 V120 H0 Z"/></svg>
+        <svg class="wave wave--front" viewBox="0 0 2880 120" preserveAspectRatio="none"><path d="M0 70 C240 30 480 30 720 70 C960 110 1200 110 1440 70 C1680 30 1920 30 2160 70 C2400 110 2640 110 2880 70 V120 H0 Z"/></svg>
+      </div>
+    </section>
+
+    <!-- ===================== NÚMEROS ===================== -->
+    <section class="stats" aria-label="A SJPA em números">
+      <div class="container stats__grid">
+        <div class="stat" data-reveal>
+          <span class="stat__number"><span data-count="600">600</span>+</span>
+          <span class="stat__label">animais sob cuidado</span>
+        </div>
+        <div class="stat" data-reveal style="--d: .1s">
+          <span class="stat__number"><span data-count="38">38</span>+</span>
+          <span class="stat__label">anos de atuação</span>
+        </div>
+        <!-- MOCK: número de adoções fictício, para teste -->
+        <div class="stat" data-reveal style="--d: .2s">
+          <span class="stat__number"><span data-count="1200">1.200</span>+</span>
+          <span class="stat__label">adoções realizadas</span>
+        </div>
+        <!-- MOCK: número de voluntários fictício, para teste -->
+        <div class="stat" data-reveal style="--d: .3s">
+          <span class="stat__number"><span data-count="150">150</span></span>
+          <span class="stat__label">voluntários ativos</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== QUEM SOMOS ===================== -->
+    <section class="section about" id="sobre">
+      <svg class="bone bone--1" aria-hidden="true"><use href="#i-bone"/></svg>
+      <div class="container about__grid">
+        <div class="about__media" data-reveal="left">
+          <div class="about__frame">
+            <img src="assets/img/sobre.jpg"
+                 alt="Mão fazendo carinho na cabeça de um cachorro feliz" loading="lazy" width="800" height="900">
+          </div>
+          <div class="about__since">
+            <span class="about__since-number">~40</span>
+            <span class="about__since-label">anos de amor pelos animais</span>
+          </div>
+        </div>
+
+        <div class="about__text">
+          <p class="eyebrow" data-reveal>Quem somos</p>
+          <h2 class="section-title" data-reveal style="--d: .05s">Conheça a SJPA</h2>
+          <p data-reveal style="--d: .1s">A <strong>Sociedade Juizforana de Proteção aos Animais</strong> atua há quase 40 anos em Juiz de Fora, resgatando e cuidando de cães e gatos abandonados da cidade e da região.</p>
+          <p data-reveal style="--d: .15s">Hoje o abrigo, na BR-040, cuida de <strong>mais de 600 animais</strong> — muitos resgatados doentes, prenhes ou com filhotes. Todo o trabalho se mantém com a ajuda da comunidade, que garante ração, vacinas, medicamentos e tratamentos veterinários.</p>
+
+          <!-- MOCK: missão, visão e valores escritos para teste -->
+          <div class="mvv">
+            <div class="mvv__item" data-reveal style="--d: .2s">
+              <span class="mvv__icon"><svg class="icon"><use href="#i-paw"/></svg></span>
+              <div><h3>Missão</h3><p>Resgatar, tratar e encontrar lares responsáveis para animais abandonados.</p></div>
+            </div>
+            <div class="mvv__item" data-reveal style="--d: .28s">
+              <span class="mvv__icon"><svg class="icon"><use href="#i-home"/></svg></span>
+              <div><h3>Visão</h3><p>Uma Juiz de Fora onde nenhum animal viva abandonado nas ruas.</p></div>
+            </div>
+            <div class="mvv__item" data-reveal style="--d: .36s">
+              <span class="mvv__icon"><svg class="icon"><use href="#i-heart"/></svg></span>
+              <div><h3>Valores</h3><p>Respeito à vida, cuidado, transparência e adoção responsável.</p></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== ADOTE ===================== -->
+    <section class="section adopt" id="adote">
+      <svg class="bone bone--2" aria-hidden="true"><use href="#i-bone"/></svg>
+      <svg class="bone bone--3" aria-hidden="true"><use href="#i-bone"/></svg>
+      <div class="container">
+        <div class="section-head" data-reveal>
+          <p class="eyebrow">Conheça alguns de nossos animais</p>
+          <h2 class="section-title">Adote seu novo companheiro!</h2>
+        </div>
+
+        <div class="adopt__toolbar" data-reveal style="--d: .1s">
+          <div class="chips" role="group" aria-label="Filtrar animais">
+            <button class="chip is-active" type="button" data-filter="todos" aria-pressed="true">Todos</button>
+            <button class="chip" type="button" data-filter="cao" aria-pressed="false">Cães</button>
+            <button class="chip" type="button" data-filter="gato" aria-pressed="false">Gatos</button>
+          </div>
+          <div class="carousel__nav">
+            <button class="carousel__btn" type="button" id="carousel-prev" aria-label="Animais anteriores"><svg class="icon"><use href="#i-left"/></svg></button>
+            <button class="carousel__btn" type="button" id="carousel-next" aria-label="Próximos animais"><svg class="icon"><use href="#i-right"/></svg></button>
+          </div>
+        </div>
+
+        <!--
+          Cada card guarda os dados do animal em data-* (usados pelo modal "Conheça minha história").
+          Flor: nome, sexo e raça vêm do material da ONG; foto ilustrativa.
+          MOCK: Thor, Mel, Bidu, Pipoca e Luna são fictícios, para teste. Fotos ilustrativas (Unsplash).
+        -->
+        <div class="carousel" id="carousel" tabindex="0" aria-label="Animais para adoção">
+          <article class="pet-card" data-type="cao"
+                   data-name="Flor" data-article="a" data-pos="62% 50%" data-info="Fêmea · Sem raça definida · Adulta · Porte médio"
+                   data-tags="Castrada|Vacinada|Vermifugada"
+                   data-story="A Flor chegou ao abrigo depois de ser encontrada sozinha na beira da estrada. Desconfiada no começo, hoje é só carinho: adora um cafuné e passear no fim da tarde. Vai ser a companheira perfeita para uma família tranquila."
+                   data-img="assets/img/pets/flor.jpg">
+            <div class="pet-card__media">
+              <img src="assets/img/pets/flor.jpg" style="object-position: 62% 50%" alt="Flor, cadela caramelo sentada" loading="lazy" width="900" height="700">
+              <span class="pet-card__tag">Cão</span>
+            </div>
+            <div class="pet-card__body">
+              <h3 class="pet-card__name">Flor</h3>
+              <p class="pet-card__info">Fêmea<br>Sem raça definida</p>
+              <button class="btn btn--teal btn--block js-open-pet" type="button">Conheça minha história</button>
+            </div>
+          </article>
+
+          <article class="pet-card" data-type="cao"
+                   data-name="Thor" data-article="o" data-pos="50% 40%" data-info="Macho · Sem raça definida · 4 anos · Porte médio"
+                   data-tags="Castrado|Vacinado|Vermifugado"
+                   data-story="O Thor é calmo, observador e muito leal. Foi resgatado ainda filhote e cresceu no abrigo. Se dá bem com outros cães e está pronto para ganhar um lar só dele."
+                   data-img="assets/img/pets/thor.jpg">
+            <div class="pet-card__media">
+              <img src="assets/img/pets/thor.jpg" alt="Thor, cachorro preto olhando para a câmera" loading="lazy" width="900" height="700">
+              <span class="pet-card__tag">Cão</span>
+            </div>
+            <div class="pet-card__body">
+              <h3 class="pet-card__name">Thor</h3>
+              <p class="pet-card__info">Macho<br>Sem raça definida</p>
+              <button class="btn btn--teal btn--block js-open-pet" type="button">Conheça minha história</button>
+            </div>
+          </article>
+
+          <article class="pet-card" data-type="gato"
+                   data-name="Pipoca" data-article="o" data-pos="30% 50%" data-info="Macho · Gato sem raça definida · 3 anos"
+                   data-tags="Castrado|Vacinado|Testado FIV/FeLV"
+                   data-story="O Pipoca é um gato tranquilo, que ama tirar sonecas no sol e ronrona alto quando recebe carinho. Convive bem com outros gatos e é ótimo para apartamento."
+                   data-img="assets/img/pets/pipoca.jpg">
+            <div class="pet-card__media">
+              <img src="assets/img/pets/pipoca.jpg" style="object-position: 30% 50%" alt="Pipoca, gato laranja deitado" loading="lazy" width="900" height="700">
+              <span class="pet-card__tag pet-card__tag--cat">Gato</span>
+            </div>
+            <div class="pet-card__body">
+              <h3 class="pet-card__name">Pipoca</h3>
+              <p class="pet-card__info">Macho<br>Sem raça definida</p>
+              <button class="btn btn--teal btn--block js-open-pet" type="button">Conheça minha história</button>
+            </div>
+          </article>
+
+          <article class="pet-card" data-type="cao"
+                   data-name="Mel" data-article="a" data-pos="50% 50%" data-info="Fêmea · Filhote · 5 meses · Porte médio quando adulta"
+                   data-tags="Vacinada|Vermifugada|Castração agendada"
+                   data-story="A Mel nasceu no abrigo e é pura energia! Curiosa e brincalhona, está aprendendo a andar na guia e vai precisar de uma família com tempo para brincar."
+                   data-img="assets/img/pets/mel.jpg">
+            <div class="pet-card__media">
+              <img src="assets/img/pets/mel.jpg" alt="Mel, filhote caramelo e branco olhando para cima" loading="lazy" width="900" height="700">
+              <span class="pet-card__tag">Cão</span>
+            </div>
+            <div class="pet-card__body">
+              <h3 class="pet-card__name">Mel</h3>
+              <p class="pet-card__info">Fêmea<br>Filhote</p>
+              <button class="btn btn--teal btn--block js-open-pet" type="button">Conheça minha história</button>
+            </div>
+          </article>
+
+          <article class="pet-card" data-type="gato"
+                   data-name="Luna" data-article="a" data-pos="35% 50%" data-info="Fêmea · Gata sem raça definida · 1 ano"
+                   data-tags="Castrada|Vacinada|Vermifugada"
+                   data-story="A Luna é curiosa e falante: adora acompanhar tudo o que acontece pela casa. Foi resgatada com os irmãos e já está pronta para um lar com janelas teladas."
+                   data-img="assets/img/pets/luna.jpg">
+            <div class="pet-card__media">
+              <img src="assets/img/pets/luna.jpg" style="object-position: 35% 50%" alt="Luna, gata cinza e branca inclinando a cabeça" loading="lazy" width="900" height="700">
+              <span class="pet-card__tag pet-card__tag--cat">Gato</span>
+            </div>
+            <div class="pet-card__body">
+              <h3 class="pet-card__name">Luna</h3>
+              <p class="pet-card__info">Fêmea<br>Sem raça definida</p>
+              <button class="btn btn--teal btn--block js-open-pet" type="button">Conheça minha história</button>
+            </div>
+          </article>
+
+          <article class="pet-card" data-type="cao"
+                   data-name="Bidu" data-article="o" data-pos="50% 50%" data-info="Macho · Sem raça definida · 2 anos · Porte médio"
+                   data-tags="Castrado|Vacinado|Vermifugado"
+                   data-story="O Bidu é brincalhão e muito sociável: faz amizade com todo mundo que chega ao abrigo. Ama correr atrás de bolinha e seria feliz numa casa com quintal."
+                   data-img="assets/img/pets/bidu.jpg">
+            <div class="pet-card__media">
+              <img src="assets/img/pets/bidu.jpg" alt="Bidu, cachorro preto e branco em fundo azul" loading="lazy" width="900" height="700">
+              <span class="pet-card__tag">Cão</span>
+            </div>
+            <div class="pet-card__body">
+              <h3 class="pet-card__name">Bidu</h3>
+              <p class="pet-card__info">Macho<br>Sem raça definida</p>
+              <button class="btn btn--teal btn--block js-open-pet" type="button">Conheça minha história</button>
+            </div>
+          </article>
+        </div>
+
+        <!-- MOCK: etapas do processo de adoção escritas para teste -->
+        <div class="steps">
+          <h3 class="steps__title" data-reveal>Como funciona a adoção</h3>
+          <ol class="steps__list">
+            <li class="step" data-reveal style="--d: .05s"><span class="step__n">1</span><h4>Escolha</h4><p>Conheça os animais aqui no site ou visite o abrigo.</p></li>
+            <li class="step" data-reveal style="--d: .15s"><span class="step__n">2</span><h4>Entrevista</h4><p>Preencha a ficha de interesse e converse com nossa equipe.</p></li>
+            <li class="step" data-reveal style="--d: .25s"><span class="step__n">3</span><h4>Visita</h4><p>Agende um encontro para conhecer seu futuro companheiro.</p></li>
+            <li class="step" data-reveal style="--d: .35s"><span class="step__n">4</span><h4>Novo lar</h4><p>Assine o termo de adoção responsável e leve seu amigo para casa.</p></li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== COMO AJUDAR ===================== -->
+    <section class="section help" id="ajudar">
+      <div class="container">
+        <div class="section-head" data-reveal>
+          <p class="eyebrow">Faça parte</p>
+          <h2 class="section-title">Como você pode ajudar</h2>
+        </div>
+        <div class="help__grid">
+          <a class="help-card" href="#adote" data-reveal style="--d: .0s">
+            <span class="help-card__icon"><svg class="icon"><use href="#i-home"/></svg></span>
+            <h3>Adote</h3>
+            <p>Dê uma nova chance a um animal resgatado e ganhe um amigo para a vida toda.</p>
+            <span class="help-card__more">Ver animais <svg class="icon"><use href="#i-right"/></svg></span>
+          </a>
+          <a class="help-card" href="#doacao" data-reveal style="--d: .1s">
+            <span class="help-card__icon"><svg class="icon"><use href="#i-heart"/></svg></span>
+            <h3>Doe</h3>
+            <p>Pix, kits de cuidado ou itens como ração, remédios e cobertores.</p>
+            <span class="help-card__more">Como doar <svg class="icon"><use href="#i-right"/></svg></span>
+          </a>
+          <a class="help-card" href="#contato" data-reveal style="--d: .2s">
+            <span class="help-card__icon"><svg class="icon"><use href="#i-gift"/></svg></span>
+            <h3>Apadrinhe</h3>
+            <p>Contribua todo mês com os cuidados de um animal enquanto ele espera por um lar.</p>
+            <span class="help-card__more">Quero apadrinhar <svg class="icon"><use href="#i-right"/></svg></span>
+          </a>
+          <a class="help-card" href="#voluntario" data-reveal style="--d: .3s">
+            <span class="help-card__icon"><svg class="icon"><use href="#i-users"/></svg></span>
+            <h3>Seja voluntário</h3>
+            <p>Ajude na limpeza, alimentação, passeios e eventos de adoção.</p>
+            <span class="help-card__more">Participar <svg class="icon"><use href="#i-right"/></svg></span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== DOAÇÕES ===================== -->
+    <section class="section donate" id="doacao">
+      <div class="container">
+        <div class="section-head" data-reveal>
+          <p class="eyebrow">Ajude a ONG</p>
+          <h2 class="section-title">Doe um kit para nossos animais</h2>
+          <p class="section-lead">Escolha um kit e ajude diretamente no cuidado de quem mais precisa.</p>
+        </div>
+
+        <div class="kits">
+          <article class="kit" data-reveal style="--d: .0s">
+            <span class="kit__icon"><svg class="icon"><use href="#i-broom"/></svg></span>
+            <h3 class="kit__title">Kit de Limpeza</h3>
+            <p class="kit__price">R$ 25</p>
+            <p class="kit__desc">Desinfetante à base de amônia quaternária para desinfecção das baias. Mantenha o ambiente limpo e seguro!</p>
+            <button class="btn btn--teal js-kit" type="button" data-kit="Kit de Limpeza" data-value="25">Doe agora</button>
+          </article>
+          <article class="kit kit--featured" data-reveal style="--d: .1s">
+            <span class="kit__ribbon">Mais escolhido</span>
+            <span class="kit__icon"><svg class="icon"><use href="#i-kit"/></svg></span>
+            <h3 class="kit__title">Kit Preventivo de Doenças</h3>
+            <p class="kit__price">R$ 50</p>
+            <p class="kit__desc">Vacina essencial para imunizar e proteger cães e gatos, garantindo a saúde e o bem-estar dos nossos animais.</p>
+            <button class="btn btn--teal js-kit" type="button" data-kit="Kit Preventivo de Doenças" data-value="50">Doe agora</button>
+          </article>
+          <article class="kit" data-reveal style="--d: .2s">
+            <span class="kit__icon"><svg class="icon"><use href="#i-syringe"/></svg></span>
+            <h3 class="kit__title">Kit Diária de Internação</h3>
+            <p class="kit__price">R$ 100</p>
+            <p class="kit__desc">Soro, cateter, equipo, esparadrapo e medicação. Essencial para o cuidado e a recuperação dos animais.</p>
+            <button class="btn btn--teal js-kit" type="button" data-kit="Kit Diária de Internação" data-value="100">Doe agora</button>
+          </article>
+        </div>
+
+        <!-- MOCK: campanha e valores de arrecadação fictícios, para teste -->
+        <div class="goal" data-reveal>
+          <div class="goal__head">
+            <h3>Campanha do mês: 2 toneladas de ração</h3>
+            <span class="goal__value"><strong>1.260 kg</strong> de 2.000 kg</span>
+          </div>
+          <div class="goal__bar" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="63" aria-label="Progresso da campanha">
+            <span class="goal__fill" data-progress="63"></span>
+          </div>
+          <p class="goal__note">63% da meta — faltam 740 kg para alimentar todos os animais neste mês.</p>
+        </div>
+
+        <div class="donate__grid">
+          <div class="panel" data-reveal="left">
+            <h3 class="panel__title">Retirada de doações</h3>
+            <p>Para retirada de doações de rações, remédios, cobertores e outros itens, entre em contato pelo telefone para agendar.</p>
+            <p>Ou deixe suas doações com nossos parceiros:</p>
+            <ul class="partners">
+              <li><svg class="icon"><use href="#i-pin"/></svg><span><strong>Arca Petstore</strong> — Bandeirantes e Santa Terezinha</span></li>
+              <li><svg class="icon"><use href="#i-pin"/></svg><span><strong>Agropecuária Café</strong></span></li>
+            </ul>
+            <a href="#contato" class="btn btn--outline">Agendar retirada</a>
+          </div>
+
+          <div class="panel panel--pix" id="pix" data-reveal="right">
+            <h3 class="panel__title">Doe via Pix</h3>
+            <p class="pix__chosen" id="pix-chosen" hidden></p>
+            <div class="pix__codes">
+              <!-- A INSERIR: QR codes reais fornecidos pela ONG (não usar dados fictícios em pagamento) -->
+              <figure class="pix__code">
+                <div class="pix__qr"><svg class="icon"><use href="#i-paw"/></svg><span>QR code<br>Pix Caixa<br><em>(a inserir)</em></span></div>
+                <figcaption>Pix Caixa</figcaption>
+              </figure>
+              <figure class="pix__code">
+                <div class="pix__qr"><svg class="icon"><use href="#i-paw"/></svg><span>QR code<br>Pix PicPay<br><em>(a inserir)</em></span></div>
+                <figcaption>Pix PicPay</figcaption>
+              </figure>
+            </div>
+            <div class="pix__cnpj">
+              <span>CNPJ: <strong id="cnpj">20.460.556/0001-78</strong></span>
+              <button class="copy-btn" type="button" id="copy-cnpj"><svg class="icon"><use href="#i-copy"/></svg>Copiar</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== VOLUNTÁRIO (banner) ===================== -->
+    <section class="volunteer" id="voluntario">
+      <div class="container volunteer__inner">
+        <div class="volunteer__media" data-reveal="left">
+          <img src="assets/img/voluntario.jpg"
+               alt="Mulher sentada no chão brincando com um cachorro que levanta a pata" loading="lazy" width="1000" height="700">
+        </div>
+        <div class="volunteer__text" data-reveal="right">
+          <p class="eyebrow eyebrow--light">Voluntariado</p>
+          <h2>Doe seu tempo. Ganhe muitas lambidas.</h2>
+          <p>Participe dos nossos mutirões de limpeza, alimentação e cuidado com os animais, ou ajude nas feiras de adoção. Toda ajuda faz diferença!</p>
+          <a href="#contato" class="btn btn--light btn--lg" data-subject="Voluntariado">Quero ser voluntário</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== DÚVIDAS (FAQ) ===================== -->
+    <section class="section faq" id="duvidas">
+      <div class="container faq__inner">
+        <div class="section-head" data-reveal>
+          <p class="eyebrow">Dúvidas frequentes</p>
+          <h2 class="section-title">Perguntas e respostas</h2>
+        </div>
+        <div class="faq__list">
+          <!-- MOCK: respostas sobre adoção e apadrinhamento escritas para teste -->
+          <details class="faq__item" data-reveal>
+            <summary>A adoção tem algum custo?</summary>
+            <div class="faq__body"><p>Não. Pedimos apenas o compromisso com a adoção responsável: cuidado, alimentação, vacinas em dia e muito amor. Contribuições espontâneas são sempre bem-vindas.</p></div>
+          </details>
+          <details class="faq__item" data-reveal style="--d: .05s">
+            <summary>Posso visitar o abrigo?</summary>
+            <div class="faq__body"><p>Sim! O atendimento é de segunda a sexta, das 8h às 13h, na BR-040, km 787. Recomendamos ligar antes para combinar a visita.</p></div>
+          </details>
+          <details class="faq__item" data-reveal style="--d: .1s">
+            <summary>Que tipo de doação vocês aceitam?</summary>
+            <div class="faq__body"><p>Doações em dinheiro (Pix), rações, remédios, cobertores e produtos de limpeza. Também é possível doar um dos nossos kits de cuidado.</p></div>
+          </details>
+          <details class="faq__item" data-reveal style="--d: .15s">
+            <summary>Como funciona o apadrinhamento?</summary>
+            <div class="faq__body"><p>Você escolhe um animal e contribui mensalmente com os custos de alimentação e saúde dele enquanto ele espera por uma família. Fale com a gente para combinar.</p></div>
+          </details>
+          <details class="faq__item" data-reveal style="--d: .2s">
+            <summary>Moro em outra cidade. Posso adotar?</summary>
+            <div class="faq__body"><p>A SJPA atende Juiz de Fora e cidades próximas. Entre em contato para avaliarmos cada caso.</p></div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== CONTATO ===================== -->
+    <section class="section contact" id="contato">
+      <div class="container contact__grid">
+        <div class="contact__info" data-reveal="left">
+          <p class="eyebrow">Contato</p>
+          <h2 class="section-title">Fale com a gente</h2>
+          <p class="section-lead">Quer adotar, apadrinhar, agendar uma retirada de doações ou tirar uma dúvida? Escolha o canal que preferir.</p>
+          <ul class="contact__list">
+            <li><span class="contact__icon"><svg class="icon"><use href="#i-phone"/></svg></span><div><strong>Telefone</strong><a href="tel:+5532999655493">(32) 99965-5493</a></div></li>
+            <li><span class="contact__icon"><svg class="icon"><use href="#i-pin"/></svg></span><div><strong>Endereço</strong><a href="https://www.google.com/maps/search/?api=1&query=BR-040+km+787+Juiz+de+Fora+MG" target="_blank" rel="noopener">BR-040, km 787 — Juiz de Fora/MG</a></div></li>
+            <li><span class="contact__icon"><svg class="icon"><use href="#i-instagram"/></svg></span><div><strong>Instagram</strong><a href="https://www.instagram.com/ong_sjpa/" target="_blank" rel="noopener">@ong_sjpa</a></div></li>
+            <!-- MOCK: e-mail de exemplo — trocar pelo e-mail real da ONG -->
+            <li><span class="contact__icon"><svg class="icon"><use href="#i-mail"/></svg></span><div><strong>E-mail</strong><a href="mailto:contato@exemplo.org">contato@exemplo.org</a></div></li>
+            <li><span class="contact__icon"><svg class="icon"><use href="#i-clock"/></svg></span><div><strong>Atendimento</strong><span>Segunda a sexta, das 8h às 13h</span></div></li>
+          </ul>
+        </div>
+
+        <form class="form" id="contact-form" novalidate data-reveal="right">
+          <h3 class="form__title">Envie uma mensagem</h3>
+          <div class="field">
+            <label for="f-nome">Nome</label>
+            <input id="f-nome" name="nome" type="text" autocomplete="name" placeholder="Seu nome" required>
+            <span class="field__error" aria-live="polite"></span>
+          </div>
+          <div class="field">
+            <label for="f-email">E-mail</label>
+            <input id="f-email" name="email" type="email" autocomplete="email" placeholder="voce@exemplo.com" required>
+            <span class="field__error" aria-live="polite"></span>
+          </div>
+          <div class="field">
+            <label for="f-assunto">Assunto</label>
+            <select id="f-assunto" name="assunto">
+              <option>Adoção</option>
+              <option>Doação</option>
+              <option>Apadrinhamento</option>
+              <option>Voluntariado</option>
+              <option>Retirada de doações</option>
+              <option>Outro</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="f-msg">Mensagem</label>
+            <textarea id="f-msg" name="mensagem" rows="4" placeholder="Escreva sua mensagem" required></textarea>
+            <span class="field__error" aria-live="polite"></span>
+          </div>
+          <button class="btn btn--teal btn--block btn--lg" type="submit">Enviar mensagem</button>
+          <p class="form__note">Protótipo: o formulário valida os campos, mas ainda não envia mensagens.</p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===================== RODAPÉ ===================== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__top">
+        <a href="#inicio" class="brand brand--footer" aria-label="SJPA — voltar ao início">
+          <img src="assets/img/logo-sjpa.png" alt="" class="brand__logo" width="58" height="58">
+          <span>
+            <span class="brand__name">SJPA</span>
+            <span class="brand__sub">Sociedade Juizforana de Proteção aos Animais</span>
+          </span>
+        </a>
+        <nav aria-label="Rodapé">
+          <ul class="footer__nav">
+            <li><a href="#sobre">Quem somos</a></li>
+            <li><a href="#adote">Adote</a></li>
+            <li><a href="#doacao">Doações</a></li>
+            <li><a href="#duvidas">Dúvidas</a></li>
+            <li><a href="#contato">Contato</a></li>
+          </ul>
+        </nav>
+        <a class="footer__social" href="https://www.instagram.com/ong_sjpa/" target="_blank" rel="noopener" aria-label="Instagram da SJPA">
+          <svg class="icon"><use href="#i-instagram"/></svg>
+        </a>
+      </div>
+      <div class="footer__bottom">
+        <span>© <span id="year">2026</span> Sociedade Juizforana de Proteção aos Animais · CNPJ 20.460.556/0001-78</span>
+        <span>Protótipo acadêmico desenvolvido pelo Grupo 2 · alguns dados são fictícios para teste · Fotos: <a href="https://unsplash.com" target="_blank" rel="noopener">Unsplash</a></span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Botão voltar ao topo -->
+  <a href="#inicio" class="to-top" id="to-top" aria-label="Voltar ao topo"><svg class="icon"><use href="#i-up"/></svg></a>
+
+  <!-- Modal "Conheça minha história" -->
+  <dialog class="modal" id="pet-modal" aria-labelledby="modal-name">
+    <div class="modal__card">
+      <button class="modal__close" type="button" id="modal-close" aria-label="Fechar"><svg class="icon"><use href="#i-close"/></svg></button>
+      <div class="modal__media"><img id="modal-img" src="" alt=""></div>
+      <div class="modal__body">
+        <h3 class="modal__name" id="modal-name"></h3>
+        <p class="modal__info" id="modal-info"></p>
+        <ul class="modal__tags" id="modal-tags"></ul>
+        <p class="modal__story" id="modal-story"></p>
+        <button class="btn btn--teal btn--block btn--lg" type="button" id="modal-adopt">Quero adotar</button>
+      </div>
+    </div>
+  </dialog>
+
+  <!-- Aviso flutuante (toast) -->
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
